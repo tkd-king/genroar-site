@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.container_main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px 3%;
+  }
+
+.btn1 {
+  background-color: #284F7A;
+}
+.shadow{
+  box-shadow: 0 0 10px 0;
+  border-radius: 20px;
+
+}
+.product-box {
+  border-radius: 10px;
+}
+
+.slide-in-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  animation: slide-in 0.3s forwards;
+  z-index: 1000;
+}
+
+@keyframes slide-in {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    right: 0;
+  }
+  to {
+    right: -300px;
+  }
+}
+
+.slide-in-panel.slide-out {
+  animation: slide-out 0.3s forwards;
+}
+
+
+.session-counter:hover {
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translateX(10px); 
+  transition: transform 1s ease; 
+}
+
+
+.banner {
+  background-image: url(/assits/image/banner2.jpg);
+  background-position: center;
+  width: 100%;
+}
+
+.session {
+  background-image: url(/assits/image/session.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Add this to your global CSS file (e.g., styles/globals.css) */
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+}
+
+.transition-shadow {
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.session-container:hover {
+  border: solid 2px #FDE68A;
+}
+
+.session-container {
+  position: relative; /* Required for absolute positioning of the pseudo-element */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: center;
+  color: white; /* Set text color to white for better visibility */
+  text-align: center;
+  padding: 40px 0;
+}
+
+.session-container::before {
+  content: ''; /* Required for pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* RGBA value for slightly transparent black */
+  mix-blend-mode: overlay; /* Apply blend mode to overlay the image */
+}
+
+
+/* styles/LoadingSpinner.css */
+.loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; /* Black background */
+  z-index: 9999; /* Ensure it is on top */
+}
+
+.loading-spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: white; /* White dots */
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  animation: loading 1.4s infinite ease-in-out both;
+}
+
+.loading-spinner .dot1 {
+  animation-delay: -0.32s;
+}
+
+.loading-spinner .dot2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes loading {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+/* Global styles or relevant CSS file */
+
+@media (min-width: 1024px) {
+  .md\\:hidden {
+    display: none;
+  }
+  .md\\:block {
+    display: block;
+  }
+}
+
+.sidebar-enter {
+  transform: translateX(-100%);
+}
+
+.sidebar-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.sidebar-exit {
+  transform: translateX(0);
+}
+
+.sidebar-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0%; /* Initial position outside the view */
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: left 5s ease-in-out; /* Animation duration */
+  z-index: 50;
+  animation-duration: 5s;
+}
+
+.sidebar.open {
+  left: 0; /* Move into view */
+}
+
+@media (min-width: 640px) {
+  .sidebar {
+    width: 360px; /* Wider width for larger screens */
+  }
+}
+.marval:hover .icon1{
+     left:13px;
+     rotate:180deg;
+     transition:0.5s ease-in;
+     cursor:pointer;
+}
+.marval:hover .icon2{
+  left:13px;
+  rotate:180deg;
+  transition:0.6s ease-in;
+  cursor:pointer;
+}
+.marval:hover .icon3{
+  left:13px;
+  rotate:180deg;
+  transition:0.7s ease-in;
+  cursor:pointer;
+}
+.marval:hover .icon4{
+  left:13px;
+  rotate:180deg;
+  transition:0.8s ease-in;
+  cursor:pointer;
+}
