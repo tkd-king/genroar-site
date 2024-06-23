@@ -203,22 +203,22 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0%; /* Initial position outside the view */
+  left: 0;
   height: 100%;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: left 5s ease-in-out; /* Animation duration */
+  transition: left 5s ease-in-out;
   z-index: 50;
   animation-duration: 5s;
 }
 
 .sidebar.open {
-  left: 0; /* Move into view */
+  left: 0;
 }
 
 @media (min-width: 640px) {
   .sidebar {
-    width: 360px; /* Wider width for larger screens */
+    width: 360px;
   }
 }
 .marval:hover .icon1{
@@ -245,3 +245,18 @@
   transition:0.8s ease-in;
   cursor:pointer;
 }
+.box:hover .uper-box{
+  top:-80px;
+  left:-55px;
+  opacity:70%;
+  transition:0.5s ease-in;
+  cursor:pointer;
+
+}
+.box:hover .lower-box{
+  left:150px;
+   bottom:-50px;
+  transition:0.5s ease-in;
+  cursor:pointer;
+}
+

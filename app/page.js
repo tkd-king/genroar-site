@@ -12,6 +12,8 @@ import Provide from '@/component/organisms/Provide';
 import TimeAcadmy from '@/component/organisms/TimeAcadmy';
 import LoadingSpinner from '@/component/atom/LoadingSpinner'; 
 import TeacherSection from '@/component/organisms/TeacherSection';
+import PortfolioBox from '@/component/molecules/PortfolioBox';
+import TeacherBoxDetailBox from '@/component/molecules/TeacherBoxDetailBox';
 
 function Page() {
   const [loading, setLoading] = useState(true);
@@ -39,6 +41,8 @@ function Page() {
           <Counter />
           <TimeAcadmy />
           <TeacherSection/>
+          <PortfolioBox />
+          <TeacherBoxDetailBox/>
         </>
       )}
     </div>
